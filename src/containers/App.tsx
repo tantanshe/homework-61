@@ -24,12 +24,14 @@ const App = () => {
   }, []);
 
   return (
-    <div>
-      <div>
-        <CountryList countries={countries} onSelectCountry={setSelectedCountryCode}/>
-      </div>
-      <div>
-        <CountryInfo countryCode={selectedCountryCode}/>
+    <div className="container mt-4">
+      <div className="row">
+        <div className="col-md-4">
+          <CountryList countries={countries} onSelectCountry={setSelectedCountryCode}/>
+        </div>
+        <div className="col-md-8">
+          <CountryInfo countryCode={selectedCountryCode}/>
+        </div>
       </div>
     </div>
   );
